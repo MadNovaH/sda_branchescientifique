@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Branche Scientifique</title>
+  <style>
+    /* Importation de la police inspirée de l'univers japonais */
+    @import url('https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&display=swap');
+    
+    /* Style global du body */
+    body {
+      font-family: 'Sawarabi Mincho', serif;
+      background: linear-gradient(180deg, #1c1c1c 0%, #333333 100%), url('https://example.com/demon-slayer-bg.jpg') no-repeat center top;
+      background-size: cover;
+      background-attachment: fixed;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+      text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+      transition: background-color 0.1s ease;
+    }
+
+    /* Animation pour le fondu */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    header {
+      text-align: center;
+      padding: 50px;
+      background-color: rgba(0, 0, 0, 0.7);
+      border-bottom: 3px solid #ff5733;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeIn 1.5s forwards 0.1s;
+    }
+
+    header h1 {
+      font-size: 3.5em;
+      margin: 0;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #ff5733;
+      text-shadow: 0 0 20px rgba(255, 87, 51, 0.8);
+    }
+
+    header p {
+      font-size: 1.5em;
+      margin: 0;
+      color: #ff5733;
+      text-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Style de la navbar */
+    nav {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 15px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+      border-bottom: 2px solid #ff5733;
+      margin-bottom: 20px;
+      opacity: 0;
+      animation: fadeIn 0.1s forwards 0.1s;
+    }
+
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin-right: 25px;
+    }
+
+    nav ul li a {
+      color: #ff5733;
+      text-decoration: none;
+      padding: 12px 25px;
+      background-color: #2d2d2d;
+      border: 2px solid #ff5733;
+      border-radius: 10px;
+      font-size: 1.2em;
+      transition: background-color 0.3s, transform 0.2s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #ff5733;
+      color: black;
+      transform: scale(1.1);
+    }
+
+    /* Style des sections */
+    .section {
+      display: none;
+      margin-top: 30px;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .active {
+      display: block;
+      opacity: 1;
+      animation: fadeIn 1s forwards;
+    }
+
+    h2 {
+      color: #ff5733;
+      font-size: 2.5em;
+      text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+      margin-top: 0;
+      text-decoration: underline;
+      opacity: 0;
+      animation: fadeIn 0.1s forwards 0.1s;
+    }
+
+    p, li {
+      color: #ffffff;
+      font-size: 1.2em;
+      line-height: 1.5em;
+      opacity: 0;
+      animation: fadeIn 0.1s forwards 0.1s;
+    }
+
+    ul {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    strong {
+      color: #ff5733;
+    }
+
+    /* Style pour la hiérarchie */
+    .hierarchy {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .hierarchy div {
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    .hierarchy div > strong {
+      font-size: 1.4em;
+      color: #ff5733;
+    }
+
+    .hierarchy div > p {
+      font-size: 1.1em;
+    }
+
+    .hierarchy .level {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .hierarchy .level div {
+      margin: 0 20px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>La Branche Scientifique</h1>
+    <p>Le rôle de la branche scientifique démoniaque dans l'étude des humains et de leurs armes.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="javascript:void(0);" onclick="showSection('accueil')">Accueil</a></li>
+      <li><a href="javascript:void(0);" onclick="showSection('organisation')">L'Organisation Scientifique</a></li>
+      <li><a href="javascript:void(0);" onclick="showSection('protocoles')">Protocoles Scientifiques</a></li>
+    </ul>
+  </nav>
+
+<!-- Sections du site -->
+<div id="accueil" class="section">
+  <h2>La Branche Scientifique Démoniaque</h2>
+  <p>Bienvenue dans la branche scientifique démoniaque. Nous sommes dédiés à l'étude approfondie des différents aspects de l'humanité, en particulier ceux qui représentent des menaces potentielles pour notre existence. Nos recherches couvrent plusieurs domaines, dont les armes humaines, l'anatomie des humains, et les plantes qu'ils cultivent. Chaque domaine est analysé pour en comprendre les propriétés et leurs interactions avec les démons.</p>
+  <p>Les katanas humains, par exemple, représentent un défi majeur. Forgées avec des matériaux et des techniques spécifiques, ces armes sont capables de nuire aux démons en exploitant certaines faiblesses. Nous nous efforçons de comprendre leur composition et leurs effets pour développer des stratégies afin d'y résister.</p>
+  <p>En plus des katanas, nous étudions également l'anatomie humaine, cherchant à identifier des points de vulnérabilité biologiques. Cette recherche est essentielle pour mieux comprendre comment les humains résistent à nos attaques et comment nous pouvons exploiter leurs faiblesses physiques.</p>
+  <p>Enfin, la recherche sur les plantes humaines explore leur potentiel comme source de ressources. Ces plantes peuvent être utilisées dans la fabrication d'armes et d'autres ressources utiles dans nos combats contre les humains.</p>
+</div>
+
+  <div id="organisation" class="section">
+    <h2>L'Organisation Scientifique Démoniaque</h2>
+    <p>La branche scientifique démoniaque est une organisation hautement structurée, dédiée à l'étude des différents aspects de l'humanité. Elle est composée de chercheurs et d'experts répartis dans diverses sections spécialisées. Chaque branche mène des recherches approfondies sur des domaines spécifiques liés aux humains, afin de mieux comprendre leurs faiblesses et d'élaborer des stratégies pour les contrer.</p>
+    <ul>
+      <li><strong>Analyse des Katanas :</strong> Cette branche se concentre sur l'étude des katanas forgés par les humains, cherchant à comprendre leur composition, leurs propriétés et la manière dont ils interagissent avec les démons.</li>
+      <li><strong>Étude Anatomique :</strong> Cette section analyse l'anatomie des humains, leur physiologie, leurs forces et faiblesses biologiques, dans le but d'identifier des points vulnérables pour les démons.</li>
+      <li><strong>Recherche Végétale :</strong> Cette branche se consacre à l'étude des plantes humaines, explorant leur potentiel en tant que source de ressources pour les démons.</li>
+    </ul>
+  
+    <div class="hierarchy">
+      <div><strong>Hiérarchie</strong></div>
+      <div>Chef de la Branche</div>
+      <div class="level">
+        <div>Sous Chef</div>
+      </div>
+      <div class="level">
+        <div>Chef Katanas</div>
+        <div>Chef Anatomie</div>
+        <div>Chef Végétal</div>
+      </div>
+      <div>Membre de la Branche</div>
+    </div>
+  </div>
+  
+
+  <div id="protocoles" class="section">
+    <h2>Protocoles Scientifiques</h2>
+    <p>Pour garantir des résultats fiables et reproductibles, la branche scientifique démoniaque suit des protocoles stricts dans toutes ses études et analyses. Ces protocoles sont conçus pour assurer la sécurité, l'intégrité des données et l'efficacité de chaque mission. Les principaux protocoles incluent :</p>
+    <ul>
+      <li><strong>Observation Passive :</strong> Ne jamais interférer avec les humains lors de l'observation. Cela permet de recueillir des données précises sur leur comportement naturel sans perturber leur environnement.</li>
+      <li><strong>Analyse de Matériaux :</strong> Utiliser des techniques d'analyse avancées pour examiner les katanas et d'autres objets humains d'intérêt. Les matériaux sont testés pour leurs propriétés énergétiques et leur résistance aux attaques démoniaques.</li>
+      <li><strong>Collecte de Données Psychologiques :</strong> Étudier le comportement des humains et leur psychologie face aux démons. Cela aide à prédire leurs réactions face à des situations extrêmes, comme un combat contre des démons ou une attaque surprise.</li>
+      <li><strong>Simulation de Combat :</strong> Mener des simulations de combat entre démons et humains pour observer l'efficacité des katanas et de leurs techniques de combat. Les données récoltées aident à affiner les stratégies démoniaques.</li>
+    </ul>
+  </div>
+
+  <script>
+    // Fonction JavaScript pour afficher les sections
+    function showSection(sectionId) {
+      // Cacher toutes les sections
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+
+      // Afficher la section demandée
+      const sectionToShow = document.getElementById(sectionId);
+      sectionToShow.classList.add('active');
+    }
+
+    // Afficher la section des Katanas par défaut
+    showSection('accueil');
+  </script>
+
+</body>
+</html>
